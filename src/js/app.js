@@ -13,3 +13,16 @@ for(let i = 1; i <= 10; i++){
         basicImage.src = e.target.src
     }
 }
+
+btn.onclick = function(){
+    const btnClass = btn.getAttribute('class');
+    if(btnClass === 'dark'){
+        btn.setAttribute('class', 'light');
+        btn.textContent = 'Светлее';
+        overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+    } else {
+        btn.setAttribute('class', 'dark');
+        btn.textContent = 'Темнее';
+        overlay.style.backgroundColor = 'rgba(0,0,0,0)';
+    }
+}
